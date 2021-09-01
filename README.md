@@ -1,1 +1,1 @@
- Line Comparison Computation proggeam using OOPS concepts
+ Line Comparison Computation program using OOPS concepts
