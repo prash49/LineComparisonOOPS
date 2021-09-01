@@ -7,7 +7,7 @@ public class LineComparison {
     double line1, line2;
     Scanner scanner = new Scanner(System.in);
 
-    public void welcome() {
+    public static void welcome() {
         System.out.println("......Welcome to Line Comparison Computation Program... ");
     }
 
@@ -40,13 +40,18 @@ public class LineComparison {
         System.out.println("Length of the line2: " + line2);
         return line2;
     }
-
-    public void compareTo() {
-        double line1Length = lengthOfLine1();
-        double line2Length = lengthOfLine2();
+    double line1Length = lengthOfLine1();
+    double line2Length = lengthOfLine2();
+    public void equalsTo() {
         if (line1Length == line2Length) {
             System.out.println("Lines are Equal");
-        } else if (line1Length > line2Length) {
+        } else {
+            System.out.println("Calling compareTo method");
+        }
+    }
+
+    public void compareTo() {
+        if (line1Length > line2Length) {
             System.out.println("Line1 is grater than Line2 ");
         } else {
             System.out.println("lines2 is grater than line1");
@@ -54,8 +59,9 @@ public class LineComparison {
     }
 
     public static void main(String[] args) {
+        welcome();
         LineComparison lineMethods = new LineComparison();
-        lineMethods.welcome();
+        lineMethods.equalsTo();
         lineMethods.compareTo();
     }
 }
